@@ -1,0 +1,88 @@
+#body{
+    /* background-color: blueviolet; */
+    background-image: url("https://wallpapers.com/images/hd/blue-mountain-9lbfzsxuzjrkpu6c.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#location{
+    display: flex;
+    margin: 35px;
+}
+#location>i{
+    margin-top: 15px;
+}
+#place{
+    margin-left: 20px;
+    color: darkblue;
+    font-size: 26px;
+}
+#searchPlace{
+    position: absolute;
+    right: 20px;
+}
+#searchPlace>input{
+    height: 40px;
+    width: 200px;
+    background-color: lightblue;
+    border: 2px solid rgb(153, 211, 230);
+}
+#temp{
+    position: absolute;
+    left: 40%;
+    height: 200px;
+    width: 200px;
+    /* ; */
+}
+#placeTemp{
+    font-size: 60px;
+    color: yellow;
+    margin-bottom: 0%;
+}
+#tempCard{
+    position: relative;
+    
+    top: 60px;
+    left: 36%;
+    height: 100px;
+    width: 300px;
+    border: 1px solid blue;
+    background-color: rgb(14, 33, 92);
+    border-radius: 20px;
+}
+#tempCard>div{
+    justify-content:space-around;
+}
+#gridDiv{
+    position: relative;
+    left: 15%;
+    top: 50px;
+    margin-top: 20px;
+    background-color: rgb(14, 33, 92);
+    border-radius: 20px;
+    height: 200px;
+    width: 850px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.NextDates{
+    background-color: lightblue;
+    margin: 10px;
+    /* margin-left: 15px; */
+    width: 150px;
+    height: 160px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.rain{
+    border: 1px solid black;
+    margin-left: 15px;
+}
+#button{
+    border:none;
+}
+#climate{
+    font-size: 20px;
+    /* border: 1px solid black; */
+    color: rgb(43, 43, 140);
+    margin: 0px;
+}
