@@ -1,8 +1,10 @@
 #body{
     /* background-color: blueviolet; */
+    height: max-content;
     background-image: url("https://wallpapers.com/images/hd/blue-mountain-9lbfzsxuzjrkpu6c.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 #location{
     display: flex;
@@ -27,9 +29,7 @@
     border: 2px solid rgb(153, 211, 230);
 }
 #temp{
-    position: absolute;
-    left: 40%;
-    height: 200px;
+    
     width: 200px;
     /* ; */
 }
@@ -39,13 +39,10 @@
     margin-bottom: 0%;
 }
 #tempCard{
-    position: relative;
-    
-    top: 60px;
-    left: 36%;
+   
     height: 100px;
     width: 300px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     background-color: rgb(14, 33, 92);
     border-radius: 20px;
 }
@@ -54,12 +51,11 @@
 }
 #gridDiv{
     position: relative;
-    left: 15%;
-    top: 50px;
+    /* left: 15%; */
     margin-top: 20px;
     background-color: rgb(14, 33, 92);
     border-radius: 20px;
-    height: 200px;
+    height: 170px;
     width: 850px;
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -67,22 +63,73 @@
 .NextDates{
     background-color: lightblue;
     margin: 10px;
-    /* margin-left: 15px; */
+    margin-left: 5px;
     width: 150px;
-    height: 160px;
+    height: 140px;
     border: 1px solid black;
     border-radius: 20px;
+    text-align: center;
 }
 .rain{
     border: 1px solid black;
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 #button{
     border:none;
+    background-color: white;
 }
 #climate{
     font-size: 20px;
     /* border: 1px solid black; */
     color: rgb(43, 43, 140);
     margin: 0px;
+}
+.temperature{
+    color: darkblue;
+}
+@media (max-width:993px){
+    .NextDates{
+        width: 120px;
+        height: 130px;
+        background-color: rgb(14, 33, 92);
+        color: white;
+    }
+    #gridDiv{
+        background-color: lightblue;
+        height: 150px;
+    }
+    .temperature{
+        color: yellow;
+    }
+}
+@media (max-width:770px){
+    #gridDiv{
+        height: min-content;
+        display: flex;
+        width: max-content;
+        flex-direction: column;
+    }
+    .NextDates{
+        /* display: flex; */
+        justify-content: space-around;
+        /* flex-direction: column; */
+        width: 300px;
+        height: min-content;
+    }
+    .temperature{
+        flex-wrap: wrap;
+        /* width: 100%; */
+    }
+    .divClass{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width:770px){
+    #location{
+        display: block;
+    }
+    #searchPlace{
+        position: static;
+    }
 }

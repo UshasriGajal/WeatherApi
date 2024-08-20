@@ -41,31 +41,36 @@ document.addEventListener('DOMContentLoaded',()=>{
                 let otherDates=document.createElement('div')    
                 otherDates.setAttribute('class','NextDates')    
                 let temperature=document.createElement('p') 
-                temperature.style.color='darkBlue'
-                temperature.style.marginLeft='35px'
+                // temperature.style.color='darkBlue'
+                temperature.setAttribute('class','temperature')
+                // temperature.style.marginLeft='35px'
                 temperature.style.fontSize='20px'
                 temperature.textContent=`${data.list[i].main.temp}"\u00B0C"`  
                                                             
                 let NextDates=data.list[i].dt_txt.slice(0,10)
-                const day = new Date(NextDates); // Replace with your desired date
+                const day = new Date(NextDates); 
                 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
                 const dayName = daysOfWeek[day.getDay()].slice(0,3);
                 
+
+                let div=document.createElement('div')
+                div.setAttribute('class','divClass')
                 let dayDate=document.createElement('p')
                 dayDate.textContent=`${data.list[i].dt_txt.slice(8,10)}/${dayName}`
-                dayDate.style.marginLeft='20px'
+                
                 const icon = document.createElement('i')
                 icon.style.marginLeft='10px'
                 icon.classList.add('fas', 'fa-cloud-sun')
                 dayDate.append(icon)
 
                 let rain=document.createElement('p')
-                rain.style.marginLeft='15px'
+                
                 rain.textContent=(data.list[i].weather[0].description)
                 // 
                 console.log(rain==['overcast clouds'])
                 // rain.append(data.list[i].weather[0].description)
-                otherDates.append(temperature,dayDate,rain)
+                div.append(dayDate,rain)
+                otherDates.append(temperature,div)
                 grid.append(otherDates)
 
                 console.log(data.list[i].dt_txt.slice(8,10))

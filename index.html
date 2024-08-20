@@ -12,26 +12,25 @@
 </head>
 <body id="body">
     <div id="location">
-        <i  class="fa-solid fa-location-dot fa-2xl" style="color: #053794;"></i>
-        <div id="place"></div>
-
-        <div id="temp">
-            <p id="placeTemp"></p>
-            <div style="display: flex;">
-                <i style="margin: 15px;" class="fa-solid fa-temperature-half fa-xl"></i>
-                <p id="climate"></p>
-            </div>
-            
-        </div>
-
+            <i  class="fa-solid fa-location-dot fa-2xl" style="color: #053794;"></i>
+            <div id="place"></div>
         <div id="searchPlace">
             <div class="input-group mb-3">
                 <input type="text" id="loc" class="form-control bg-info-subtle" placeholder="Enter Location" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2"><button id="button" type='submit' onclick="submit()">Search</button></span>
+                <span class="input-group-text bg-white" id="basic-addon2"><button id="button" type='submit' onclick="submit()">Search</button></span>
               </div>
         </div>
     </div>
-    <div id="tempCard">
+
+    <div id="temp" class="container text-center">
+        <p id="placeTemp"></p>
+        <div style="display: flex;" class="container text-center">
+            <i style="margin: 15px;" class="fa-solid fa-temperature-half fa-xl"></i>
+            <p id="climate"></p>
+        </div>
+    </div>
+
+    <div id="tempCard" class="container text-center">
         <div style=" margin: 20px;">
             <div style="display: flex;">
                 <i class="fa-solid fa-sun" style="color: #FFD43B; margin-top: 5px;"></i>
@@ -52,7 +51,7 @@
         
         
     </div>
-    <div id="gridDiv">
+    <div id="gridDiv" class="container text-center">
 
     </div>
     <script src="weather.js"></script> 
