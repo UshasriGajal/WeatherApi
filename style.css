@@ -49,6 +49,8 @@
 #tempCard>div{
     justify-content:space-around;
 }
+
+
 #gridDiv{
     position: relative;
     /* left: 15%; */
