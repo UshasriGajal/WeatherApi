@@ -47,7 +47,9 @@
     border-radius: 20px;
 }
 #tempCard>div{
+    padding-top: 20px;
     justify-content:space-around;
+    /* border: 1px solid black; */
 }
 
 
@@ -133,5 +135,19 @@
     }
     #searchPlace{
         position: static;
+    }
+}
+@media (max-width:400px){
+    #tempCard{
+        width: 250px;
+    }
+    #gridDiv{
+        width: 250px;
+    }
+    .NextDates{
+        width: 220px;
+    }
+    #placeTemp{
+        font-size: 45px;
     }
 }
